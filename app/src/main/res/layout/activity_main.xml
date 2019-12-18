@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activity.MainActivity">
+
+    <include
+        android:id="@+id/MainActivity_Include_Toolbar"
+        layout="@layout/toolbar_de_la_app" />
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/MainActivity_DrawerLayout_Contenedor"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?actionBarSize">
+
+        <FrameLayout
+            android:id="@+id/MainActivity_FrameLayout_ContenedorDeFragments"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/MainActivity_contenedorSearch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/MainActivity_NavigationView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@color/colorPrimary2"
+            app:headerLayout="@layout/header_navigation_view"
+            app:itemTextColor="@color/colorPrimary"
+            app:menu="@menu/menu_principal">
+
+        </com.google.android.material.navigation.NavigationView>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</FrameLayout>

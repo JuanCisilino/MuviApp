@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".view.fragment.FragmentHome">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrincipal"
+            android:orientation="vertical">
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/FragmentViewPager_ViewPager_Contenedor"
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:background="@color/colorSecundario" />
+
+            <FrameLayout
+                android:id="@+id/celdaViewPager_Frame"
+                android:layout_width="match_parent"
+                android:layout_height="210dp">
+
+                <ProgressBar
+                    android:id="@+id/celdaViewPager_ProgressBarFondo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <ImageView
+                    android:id="@+id/FragmentViewPager_ImageView_FondoPelicula"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="matrix"
+                    android:layout_alignBottom="@id/FragmentViewPager_ViewPager_Contenedor"
+                    android:layout_alignParentTop="true"/>
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/FragmentViewPager_TextView_NombrePelicula"
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/FragmentViewPager_ViewPager_Contenedor"
+                android:layout_toRightOf="@id/celdaViewPager_FramePoster"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="10dp"
+                android:background="@color/colorPrincipal"
+                android:text="@string/nombrepelicula"
+                android:textColor="@color/colorTexto"
+                android:textSize="13dp"
+                android:layout_alignParentRight="true" />
+
+            <TextView
+                android:id="@+id/Fragment_TextView_Director"
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/FragmentViewPager_TextView_NombrePelicula"
+                android:layout_toRightOf="@id/celdaViewPager_FramePoster"
+                android:layout_alignStart="@id/FragmentViewPager_TextView_NombrePelicula"
+                android:layout_alignParentEnd="true"
+                android:background="@color/colorPrincipal"
+                android:paddingBottom="5dp"
+                android:text="@string/nombre_director"
+                android:textColor="@color/colorTexto"
+                android:textSize="12sp"
+                android:layout_alignLeft="@id/FragmentViewPager_TextView_NombrePelicula"
+                android:layout_alignParentRight="true" />
+
+            <FrameLayout
+                android:id="@+id/celdaViewPager_FramePoster"
+                android:layout_alignBottom="@id/Fragment_TextView_Director"
+                android:layout_width="100dp"
+                android:layout_height="140dp">
+
+                <ProgressBar
+                    android:id="@+id/celdaViewPager_ProgressBarPoster"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <ImageView
+                    android:id="@+id/FragmentViewPager_ImageView_PosterPelicula"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </FrameLayout>
+
+        </RelativeLayout>
+</FrameLayout>

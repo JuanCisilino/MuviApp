@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="60dp"
+    android:layout_height="130dp"
+    android:orientation="vertical"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/CeldaFamoso_CardView_Contenedor"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/colorPrimary2"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        app:cardCornerRadius="2.5dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        app:cardElevation="6dp"
+        android:layout_marginLeft= "5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:id="@+id/celdaFamoso_Frame"
+                android:layout_width="match_parent"
+                android:layout_height="80dp">
+
+                <ProgressBar
+                    android:id="@+id/celdaFamoso_ProgressBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:id="@+id/CeldaFamoso_ImageView_ImagenFamoso"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:scaleType="fitXY" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/CeldaFamoso_TextView_NombreFamoso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/celdaFamoso_Frame"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:paddingTop="8dp"
+                android:textColor="@color/colorTexto"
+                android:textSize="10sp"
+                android:gravity="center_horizontal"
+                android:textStyle="bold"
+                tools:text="@string/nombre_famoso" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

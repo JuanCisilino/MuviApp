@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "78857673906",
+    "firebase_url": "https://muviapp-4d359.firebaseio.com",
+    "project_id": "muviapp-4d359",
+    "storage_bucket": "muviapp-4d359.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:78857673906:android:1bb9f28b9dade1877bfdab",
+        "android_client_info": {
+          "package_name": "com.muviteam.muviapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "78857673906-orcsk2bkalnrrkvgt5ick4dmmbme9nl2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.muviteam.muviapp",
+            "certificate_hash": "5bea67f83032b97f1b3ce5089dc1423c9303a9c5"
+          }
+        },
+        {
+          "client_id": "78857673906-dhfi8f1p1jq5f094bls28r65vu7g3dst.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQIOgiTvkTSlpRmQ1w_bAqZcqGaufJKG8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "78857673906-dhfi8f1p1jq5f094bls28r65vu7g3dst.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

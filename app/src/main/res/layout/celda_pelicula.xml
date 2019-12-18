@@ -1,0 +1,70 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="110dp"
+    android:layout_height="wrap_content"
+    android:paddingLeft="5dp"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/CeldaFamoso_CardView_Contenedor"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/colorPrimaryDark"
+        app:cardCornerRadius="2.5dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:layout_marginBottom="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/CeldaPelicula_TextView_NombrePelicula"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/CeldaPelicula_TextView_RatingPelicula"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:paddingTop="8dp"
+                android:textColor="@color/colorTexto"
+                android:gravity="center_horizontal"
+                android:textStyle="bold"
+                tools:text="@string/nombrepelicula" />
+
+            <FrameLayout
+                android:id="@+id/celdaPelicula_Frame"
+                android:layout_width="match_parent"
+                android:layout_height="140dp">
+
+                <ProgressBar
+                    android:id="@+id/celdaPelicula_ProgressBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:id="@+id/CeldaPelicula_ImageView_ImagenPelicula"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:scaleType="fitXY" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/CeldaPelicula_TextView_RatingPelicula"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/celdaPelicula_Frame"
+                android:drawableStart="@drawable/ic_star_black_24dp"
+                android:gravity="start"
+                android:textColor="@color/colorTexto"
+                tools:text="0.0"
+                android:drawableLeft="@drawable/ic_star_black_24dp"
+                android:background="#BF000000" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

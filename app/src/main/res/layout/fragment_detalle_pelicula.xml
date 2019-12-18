@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.fragment.FragmentDetallePelicula"
+    android:background="@color/colorPrimaryDark">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarAlwaysDrawHorizontalTrack="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/FragmentViewPager_ViewPager_Contenedor"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                />
+
+            <ImageView
+                android:id="@+id/detalle_peliculas_imageview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="matrix"
+                android:src="@drawable/load"
+                android:layout_alignParentTop="true"
+                android:layout_alignBottom="@id/FragmentViewPager_ViewPager_Contenedor"
+                />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fav_floating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/ic_favorite_border_black_24dp"
+                />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/share_floating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="36dp"
+                android:layout_marginRight="16dp"
+                android:layout_below="@+id/fav_floating"
+                android:src="@drawable/ic_share_black_24dp"
+                />
+
+            <View
+                android:id="@+id/View_abajoDeNombreyDirector"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/colorPrimary2"
+                android:layout_below="@id/detalle_peliculas_imageview"
+                />
+
+            <TextView
+                android:id="@+id/fragment_detalle_TituloPelicula"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/nombrepelicula"
+                android:textColor="@color/colorTexto"
+                android:textSize="18sp"
+                android:layout_marginTop="230dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/poster_detalle_pelicula"/>
+
+            <TextView
+                android:id="@+id/Fragment_TextView_Director"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fragment_detalle_TituloPelicula"
+                android:layout_toRightOf="@id/poster_detalle_pelicula"
+                android:text="@string/nombre_director"
+                android:textColor="@color/colorTexto"
+                android:textSize="12sp"
+
+                android:layout_marginLeft="10dp"
+                />
+
+            <ImageView
+                android:id="@+id/poster_detalle_pelicula"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="115dp"
+                android:background="@color/colorAccent"
+                android:layout_marginLeft="15dp" />
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="230dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_play_circle_outline_black_24dp"/>
+
+            <Button
+                android:alpha="0.0"
+                android:id="@+id/detalle_peliculas_boton_trailer"
+                android:layout_width="170dp"
+                android:layout_height="230dp"
+                android:layout_centerHorizontal="true"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:background="@color/colorPrimary2"
+                android:layout_below="@id/View_abajoDeNombreyDirector"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"/>
+
+            <TextView
+                android:id="@+id/reparto_detalle_pelicula"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Reparto"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                android:textAlignment="center"
+                android:layout_below="@id/View_abajoDeNombreyDirector"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/fragment_famoso_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="4dp"
+                android:scrollbars="horizontal"
+                android:layout_below="@id/reparto_detalle_pelicula">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:background="@color/colorPrimary2"
+                android:layout_below="@id/fragment_famoso_recycler"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"/>
+
+            <TextView
+                android:id="@+id/sinopsis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SINOPSIS"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_below="@id/fragment_famoso_recycler"
+                android:layout_centerHorizontal="true"
+                />
+
+            <TextView
+                android:id="@+id/fragment_detalle_DescripcionPelicula"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="Sinopsis de la Pelicula"
+                android:textAllCaps="true"
+                android:textColor="#ffff"
+                android:textSize="15sp"
+                android:textStyle="normal"
+                android:layout_below="@id/sinopsis"
+                />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:background="@color/colorPrimary2"
+                android:layout_below="@id/fragment_detalle_DescripcionPelicula"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"/>
+
+
+            <TextView
+                android:id="@+id/similares_detalle_pelicula"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Peliculas Similares"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                android:textAlignment="center"
+                android:layout_below="@id/fragment_detalle_DescripcionPelicula"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/fragment_similares_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="4dp"
+                android:scrollbars="horizontal"
+                android:layout_below="@id/similares_detalle_pelicula">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </RelativeLayout>
+
+    </ScrollView>
+
+</FrameLayout>

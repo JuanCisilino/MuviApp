@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".view.fragment.FragmentHome">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarAlwaysDrawHorizontalTrack="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/fragment_view_Pager"
+                android:layout_width="match_parent"
+                android:layout_height="250dp">
+            </androidx.viewpager.widget.ViewPager>
+
+            <RelativeLayout
+                android:id="@+id/MainActivity_RelativeLayout_PopularLista"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/colorPrimary2">
+
+                <TextView
+                    android:id="@+id/MainActivity_TextView_Popular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="7dp"
+                    android:text="@string/popular_movies_es"
+                    android:textColor="@color/colorPrimary"
+                    android:textAllCaps="true"
+                    android:textSize="20sp" />
+
+                <com.takusemba.multisnaprecyclerview.MultiSnapRecyclerView
+                    android:id="@+id/MainActivity_MultiSnapRecyclerView_PopularListMovie"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/MainActivity_TextView_Popular"
+                    android:orientation="horizontal"
+                    app:msrv_gravity="start"
+                    app:msrv_ms_per_inch="100"
+                    app:msrv_snap_count="3" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/MainActivity_RelativeLayout_TopRatedLista"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@color/colorPrimary2">
+
+                <TextView
+                    android:id="@+id/MainActivity_TextView_TopRated"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="7dp"
+                    android:text="@string/top_rating_movies_es"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp"
+                    android:textAllCaps="true"
+                    />
+
+                <com.takusemba.multisnaprecyclerview.MultiSnapRecyclerView
+                    android:id="@+id/MainActivity_MultiSnapRecyclerView_TopRatedListMovie"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/MainActivity_TextView_TopRated"
+                    android:orientation="horizontal"
+                    app:msrv_gravity="start"
+                    app:msrv_ms_per_inch="100"
+                    app:msrv_snap_count="3" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/MainActivity_RelativeLayout_UpcomingLista"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@color/colorPrimary2">
+
+                <TextView
+                    android:id="@+id/MainActivity_TextView_Upcoming"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="7dp"
+                    android:text="@string/upcoming_movies_es"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp"
+                    android:textAllCaps="true"
+                    />
+
+                <com.takusemba.multisnaprecyclerview.MultiSnapRecyclerView
+                    android:id="@+id/MainActivity_MultiSnapRecyclerView_UpcomingListMovie"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/MainActivity_TextView_Upcoming"
+                    android:orientation="horizontal"
+                    app:msrv_gravity="start"
+                    app:msrv_ms_per_inch="100"
+                    app:msrv_snap_count="3" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

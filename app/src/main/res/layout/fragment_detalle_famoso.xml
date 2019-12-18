@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary2"
+    tools:context=".view.fragment.FragmentDetalleFamoso">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/Fragment_ImageView_Famoso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="16dp"
+                android:background="@color/colorAccent"
+                android:padding="3dp" />
+
+            <TextView
+                android:id="@+id/Fragment_TextView_NombreFamoso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Fragment_ImageView_Famoso"
+                android:layout_centerHorizontal="true"
+                android:text="NOMBRE:"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/Fragment_TextView_BioFamoso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Fragment_TextView_NombreFamoso"
+                android:gravity="center_horizontal"
+                android:text="BIO:"
+                android:textColor="@color/colorPrimary" />
+
+
+            <TextView
+                android:id="@+id/Fragment_TextView_ApareceEn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Fragment_TextView_BioFamoso"
+                android:layout_centerHorizontal="true"
+                android:text="APARECE EN"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/Fragment_Recicler_contenedorDeApareceEn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Fragment_TextView_ApareceEn" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

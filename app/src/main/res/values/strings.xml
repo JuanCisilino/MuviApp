@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">MuviApp</string>
+    <string name="titulo_main_activity">MUVI</string>
+    <string name="top_rating_movies_es">Mejor Puntuadas</string>
+    <string name="upcoming_movies_es">Coming Soon</string>
+    <string name="popular_movies_es">Populares</string>
+
+    <string name="open_drawer">Open Drawer</string>
+    <string name="close_drawer">Close Drawer</string>
+    <string name="facebook_app_id">626872084515810</string>
+    <string name="fb_login_protocol_scheme">fb711374606035243</string>
+
+    <string-array name="peliculas_array"></string-array> <!--Esta linea tiene que ser borrada o modificada en algun momento-->
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nombrepelicula">Nombre Pelicula</string>
+    <string name="nombre_director">Nombre Director</string>
+    <string name="nombre_famoso">Nombre Famoso</string>
+    <string name="cumple_hoy">Cumplen Hoy</string>
+    <string name="titulogeneros">generos</string>
+
+    <string name="password">Password</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="registrarse">Registrarse</string>
+    <string name="ingresar_sin_registrarse">Ingresar sin registrarse</string>
+    <string name="email">Email</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellido">Apellido</string>
+
+    <string name="cargar_imagen">Cargar Imagen</string>
+    <string name="guardar_cambios">Guardar Cambios</string>
+</resources>
