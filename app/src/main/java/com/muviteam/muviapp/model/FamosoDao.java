@@ -14,7 +14,7 @@ import retrofit2.Response;
 public class FamosoDao extends PeliculaRetrofitDao {
 
     private static final String BASE_URL = "https://api.themoviedb.org/3/";
-    public static final String API_KEY = "41c70e6b99d8ae34c17c9c34fd81e344";
+    public static final String API_KEY = "1d3a01b7a462bea05038866f2fab52a1";
     public static String LANGUAGE = "es";
 
 
